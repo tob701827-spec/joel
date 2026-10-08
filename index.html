@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lo que aprendí del video Fazt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">2do 6ta BTI - Software</div>
+            <ul>
+                <li><a href="#introduccion">Inicio</a></li>
+                <li><a href="#conceptos">Conceptos</a></li>
+                <li><a href="#cuestionario">Cuestionario</a></li>
+                <li><a href="#practica">Aplicación</a></li>
+                <li><a href="#conclusion">Conclusión</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Lo que aprendí del video</h1>
+            <p>Análisis del tutorial: Supabase - Tutorial Práctico y Overview (REST API)</p>
+            <div class="datos">
+                <strong>Estudiante:</strong> Jonathan Fernández <br>
+                <strong>Curso:</strong> 2do 6ta BTI Informática - Asunción Escalada <br>
+                <strong>Asignatura:</strong> Software - Desarrollo Web
+            </div>
+            <a class="btn" href="https://www.youtube.com/watch?v=pi33WDrgfpI" target="_blank">Ver Video Original</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduccion">
+            <h2>1. Introducción</h2>
+            <p>El video explica qué es <strong>Supabase</strong>, una alternativa open source a Firebase que nos permite crear un backend completo sin programar tanto. Muestra cómo crear un proyecto, configurar la base de datos Postgres, activar la API REST automática y conectar una app con autenticación.</p>
+        </section>
+
+        <section id="conceptos">
+            <h2>2. Conceptos Fundamentales</h2>
+            <div class="grid">
+                <div class="card"><h3>1. Supabase</h3><p>Plataforma BaaS (Backend as a Service) que ofrece base de datos, auth, storage y API automática.</p></div>
+                <div class="card"><h3>2. PostgreSQL</h3><p>Base de datos relacional potente que usa Supabase por defecto. Guarda tablas con filas y columnas.</p></div>
+                <div class="card"><h3>3. REST API</h3><p>Supabase genera automáticamente una API para que tu web pueda hacer GET, POST, PUT, DELETE sin crear servidor.</p></div>
+                <div class="card"><h3>4. RLS (Row Level Security)</h3><p>Sistema de seguridad para decidir qué usuario puede ver o editar qué filas.</p></div>
+                <div class="card"><h3>5. Autenticación</h3><p>Login con email/contraseña, Google, etc. Supabase maneja usuarios en la tabla auth.users</p></div>
+            </div>
+        </section>
+
+        <section id="cuestionario">
+            <h2>3. Cuestionario Resuelto (12 preguntas)</h2>
+
+            <article>
+                <h3>1. ¿Cuál es el tema principal del video? Explica de qué trata.</h3>
+                <p>El tema principal es Supabase como herramienta para crear un backend completo rápidamente. El video hace un overview práctico: crear proyecto, crear tablas, ver cómo se genera la API REST, y cómo conectarlo desde el frontend con JavaScript.</p>
+            </article>
+            <article>
+                <h3>2. ¿Qué problema o necesidad tecnológica se aborda?</h3>
+                <p>Resuelve el problema de tener que programar todo un servidor desde cero. Muchos estudiantes no saben Node/Express. Supabase evita eso y te da base de datos, API y login listo para usar en minutos.</p>
+            </article>
+            <article>
+                <h3>3. ¿Cuáles son los cinco conceptos más importantes? Define cada uno.</h3>
+                <ul>
+                    <li><b>Backend as a Service:</b> No haces servidor, usas uno ya hecho.</li>
+                    <li><b>PostgreSQL:</b> Base de datos SQL avanzada.</li>
+                    <li><b>API REST automática:</b> Cada tabla se convierte en una URL tipo /rest/v1/tabla</li>
+                    <li><b>RLS - Row Level Security:</b> Reglas de seguridad por fila.</li>
+                    <li><b>Supabase Client:</b> Librería JS para conectar tu web con supabase.</li>
+                </ul>
+            </article>
+            <article>
+                <h3>4. ¿Qué herramientas, programas o tecnologías se mencionan y para qué sirven?</h3>
+                <p>Supabase Dashboard (para crear tablas), PostgreSQL (BD), JavaScript SDK, SQL Editor, Authentication, Storage para archivos, y Postman para probar la API.</p>
+            </article>
+            <article>
+                <h3>5. ¿Qué procedimientos o pasos se explican? Preséntalos en orden.</h3>
+                <ol>
+                    <li>Crear cuenta en supabase.com y nuevo proyecto.</li>
+                    <li>Crear tabla desde Table Editor.</li>
+                    <li>Activar RLS y crear policies.</li>
+                    <li>Copiar URL y ANON KEY.</li>
+                    <li>Instalar supabase-js y conectar: createClient(url, key).</li>
+                    <li>Hacer consultas: select, insert, update, delete.</li>
+                </ol>
+            </article>
+            <article>
+                <h3>6. ¿Qué ejemplos prácticos aparecen? Explica uno detalladamente.</h3>
+                <p>El ejemplo principal es crear una tabla de recetas. Se crea tabla con id, nombre, ingredientes. Luego desde JS se hace <code>supabase.from('recetas').select()</code> y muestra los datos en la web. Si RLS está desactivado no funciona, por eso enseña a activarlo.</p>
+            </article>
+            <article>
+                <h3>7. ¿Qué conocimientos previos son necesarios para comprender lo explicado?</h3>
+                <p>Básico de HTML, JavaScript, qué es una base de datos, qué es una tabla, y nociones de API (GET/POST).</p>
+            </article>
+            <article>
+                <h3>8. ¿Qué ventajas o beneficios ofrece la tecnología o procedimiento?</h3>
+                <p>Es gratis para empezar, es muy rápido, no necesitas servidor, es open source, tiene documentación buena y escala bien. Ideal para proyectos del colegio.</p>
+            </article>
+            <article>
+                <h3>9. ¿Qué dificultades, errores o precauciones deben considerarse?</h3>
+                <p>Si olvidas activar RLS quedas inseguro. Si no pones policies, no podrás leer datos y parecerá que está roto. Cuidar no exponer la Service Role Key. Verificar el email de usuarios.</p>
+            </article>
+            <article>
+                <h3>10. ¿Cómo aplicarías lo aprendido en un proyecto informático real?</h3>
+                <p>Lo usaría para mi proyecto final, una app de comunicación para el colegio. cada estudiante tendria que poner una identificación para poder acceder a una cuenta, de igual manera también los profesores </p>
+            </article>
+            <article>
+                <h3>11. ¿Qué parte del video consideras más importante y por qué?</h3>
+                <p>La parte de RLS. Porque sin eso la base de datos queda abierta y es un error de seguridad muy común.(Ya voy a arreglar esa parte profe:c)</p>
+            </article>
+            <article>
+                <h3>12. ¿Qué conocimientos nuevos adquiriste y cómo los explicarías a otra persona?</h3>
+                <p>Aprendí que no hace falta crear una API a mano, Supabase la crea sola. Se lo explicaría a un amigo asi "Es como Firebase pero con Postgres, creas tu tabla en la web y ya podes pedir datos con una línea de JS".</p>
+            </article>
+        </section>
+
+        <section id="practica">
+            <h2>4. Aplicación Práctica</h2>
+            <p>Ejemplo de conexión real:</p>
+<pre><code>import { createClient } from '@supabase/supabase-js'
+const supabase = createClient('TU_URL', 'TU_ANON_KEY')
+
+// Leer datos
+const { data } = await supabase.from('productos').select('*')
+console.log(data)
+
+// Insertar
+await supabase.from('productos').insert({ nombre: 'Laptop', precio: 500 })
+</code></pre>
+        </section>
+
+        <section id="conclusion">
+            <h2>5. Conclusión Personal</h2>
+            <p>Este video me mostró que hoy se puede hacer un proyecto profesional sin ser experto en backend. Supabase ahorra mucho tiempo y me servirá para mis trabajos. Entendí la importancia de la seguridad con RLS y cómo una buena base de datos es la base de cualquier app.</p>
+            
+            <h3>Fuentes</h3>
+            <ul>
+                <li>Video: <a href="https://www.youtube.com/watch?v=pi33WDrgfpI" target="_blank">Supabase, Tutorial Práctico y Overview (REST API)</a></li>
+                <li>Documentación oficial: supabase.com/docs</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Colegio Nacional EMD Asunción Escalada - 2º BTI - 2026 | Página creada con HTML5 y CSS</p>
+    </footer>
+</body>
+</html>
